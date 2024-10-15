@@ -4,8 +4,8 @@ from telegram.ext import Updater, InlineQueryHandler, CallbackContext
 from uuid import uuid4
 import logging
 
-TMDB_API_KEY = 'YOUR_TMDB_API_KEY'
-BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
+TMDB_API_KEY = 'fd4063c363c64f26e414f3a05c44edb9'
+BOT_TOKEN = '6850296146:AAGkbAFPe3WKGH6ot_k5pXjv6BRL9iLGVR0'
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
@@ -45,7 +45,7 @@ def inline_query(update, context: CallbackContext):
         context.bot.answer_inline_query(update.inline_query.id, results)
 
 def start_bot():
-    updater = Updater(BOT_TOKEN)
+    updater = Updater('6850296146:AAGkbAFPe3WKGH6ot_k5pXjv6BRL9iLGVR0')
     dp = updater.dispatcher
     dp.add_handler(InlineQueryHandler(inline_query))
 
